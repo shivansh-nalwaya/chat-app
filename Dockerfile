@@ -1,5 +1,5 @@
 FROM ruby:2.5
-RUN apt-get update -qq && apt-get install -y postgresql-client
+RUN apt-get update -qq && apt-get install -y nodejs postgresql-client
 RUN mkdir /chat_app
 WORKDIR /chat_app
 COPY Gemfile /chat_app/Gemfile
