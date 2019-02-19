@@ -8,6 +8,10 @@ class Message < ApplicationRecord
   private
 
   def broadcast_message
-    MessageBroadcastJob.perform_later(self)
+    ActionCable.server.broadcast 'chat_channel', message: render_message(self)
+  end
+
+  def render_message(message)
+    MessagesController.render partial: 'messages/message', locals: {message: message}
   end
 end
