@@ -9,8 +9,10 @@ jQuery(document).on 'turbolinks:load', ->
       },
       
       connected: ->
+        console.log("Connected")
 
       disconnected: ->
+        console.log("Disconnected")
 
       received: (data) ->
         if data['message']
