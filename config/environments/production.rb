@@ -92,6 +92,6 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  config.action_cable.url = 'wss://chatrapp.scalingo.io/cable'
-  config.action_cable.allowed_request_origins = [ 'https://chatrapp.scalingo.io/', 'http://chatrapp.scalingo.io/' ]
+  config.action_cable.url = 'wss://chat-app.scalingo.io/cable'
+  config.action_cable.allowed_request_origins = [ 'https://chat-app.scalingo.io/', 'http://chat-app.scalingo.io/' ]
 end
